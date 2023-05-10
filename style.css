@@ -1,0 +1,150 @@
+html, body {
+    height: 100%;
+    width:99.9%;
+    margin: 0;
+    background-color: rgba(0,0,0,0.1);
+}
+a{
+    text-decoration: none;
+}
+.Introduction{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    border-bottom: solid rgba(0,0,0,0.1) 1px;
+    width: 100%;
+    height: 500px;
+}
+.Introduction-nav{
+    display:flex;
+    border: 1px solid white;
+    align-items: center;
+    width:100%;
+    height:50px;
+    background-color: gray;
+}
+.Introduction-nav a{
+    color: white;
+    margin-left: 30px;
+}
+.Introduction-name{
+    width: 200px;
+    height: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes FadeInName{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.Introduction-name span{
+    font-size: 50px;
+    font-weight: 550;
+    transition: all 0.5s ease-in-out;
+    animation: FadeInName 3s;
+}
+.Introduction-name span:hover{
+    color: whitesmoke;
+    font-size: 60px;
+}
+@keyframes Big{
+    from{
+        font-size: 0px;
+    }
+    to{
+        font-size: 20px;
+    }
+}
+.Introduction-info p{
+    font-size: 20px;
+    font-weight: 600;
+    color:green;
+    text-align: center;
+    display: block;
+    animation: Big .3s ease-in-out;
+}
+.Introduction-info__value{
+    color:aquamarine;
+    transition: color 0.6s ease-in-out;
+}
+.Introduction-info__value:hover{
+    color:dodgerblue;
+}
+.links{
+    margin: 0 auto;
+    padding: 0;
+    margin: 0px 50px;
+    width: 970px;
+    height: 190px;
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
+}
+.link-box{
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border: solid black 1px;
+    border-radius: 25px;
+    width: 950px;
+    height: 40px;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
+    opacity: 0;
+    animation: FadeIn .6s forwards;
+}
+.two{
+    animation-delay: 0.2s;
+}
+.three{
+    animation-delay: 0.4s;
+}
+.link span{
+    font-weight: 600;
+}
+.links > a{
+    color: black;
+    transition: color 0.3s ease-in-out;
+}
+.links > a:hover .link{
+    background-color: gray;
+}
+.links > a:hover{
+    color:white;
+}
+@keyframes FadeIn{
+    from{
+        transform: translateY(50px);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes rotation{
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate:360deg;
+    }
+}
+.commingSoon{
+    margin-top:100px;
+    font-size: 25px;
+    font-weight: 600;
+    animation: rotation 1.5s linear infinite;
+}
